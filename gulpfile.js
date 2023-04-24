@@ -8,6 +8,7 @@ import bs from "browser-sync";
 import imagemin from 'gulp-imagemin';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
+import rename from "gulp-rename";
 
 const sass = gulpSass(dartSass);
 const browserSync = bs.create();
@@ -33,6 +34,7 @@ const imgMin = () => {
 const html = () => {
     return gulp.src('./src/**/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(rename("index.html"))
         .pipe(gulp.dest("./"));
 };
 
