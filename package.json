@@ -1,0 +1,30 @@
+{
+  "name": "step-project-2-forkio",
+  "version": "1.0.0",
+  "description": "Dmytro Kud & Stepan Dumenko \tPE_17",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteeveTrader/step-project-2-forkio"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Stepan Dumenko & Dmytro Kud",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.62.0"
+  }
+}
