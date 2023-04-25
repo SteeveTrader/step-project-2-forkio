@@ -1,0 +1,79 @@
+@import './abstracts/variables';
+@import './abstracts/mixin';
+
+.revolutionary {
+    min-width: 320px;
+    @include flex;
+    @include padding;
+}
+
+.revolutionary__header {
+    color: #635C73;
+    @include monserrat;
+    font-size: 26px;
+    line-height: 28px;
+    text-transform: uppercase;
+    padding-bottom:27px;
+    text-align: center;
+    width: 273px;
+
+    @media (min-width: $bp-tablet) {
+        width: 100%; 
+    }
+}
+
+.revolutionary__text {
+    color: #323232;
+    @include lato(400);
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 36px;
+    text-align: center;
+}
+
+.revolutionary__buttons {
+    @include flex(center, center, row);
+    gap: 10px;
+    width: 280px;
+    flex-wrap: wrap;
+
+    @media (min-width: $bp-tablet) {
+        flex-wrap: nowrap; 
+    }
+}
+
+
+.btn {
+    @include flex(center, center, row);
+    gap: 5px;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: var(--base-text-weight-medium, 500);
+    cursor: pointer;
+    border: 1px solid #c9d1d9;
+    border-radius: 6px;
+    background: #21262d;
+    color: #c9d1d9;
+}
+
+.oction {
+    color: #7d8590;
+    fill: currentColor;
+}
+
+.counter {
+    background: #30363d;
+    padding: 0 5px;
+    border-radius: 50%;
+}
+
+.dropdown-caret {
+    border-bottom-color: #0000;
+    border-left-color: #0000;
+    border-right-color: #0000;
+    border-style: solid;
+    border-width: var(--primer-borderWidth-thicker, 4px) var(--primer-borderWidth-thicker, 4px) 0;
+    content: "";
+    margin-left: 4px;
+    opacity: .8;
+    }

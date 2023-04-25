@@ -1,7 +1,7 @@
-@import "./base/reset";
-@import "./base/defaults";
-@import './components/header';
-@import './abstracts/variables';
+@use "./base/reset";
+@use "./base/defaults";
+@use './components/revolutionary';
+
 
 body {
   font-family: 'Karla', sans-serif;
