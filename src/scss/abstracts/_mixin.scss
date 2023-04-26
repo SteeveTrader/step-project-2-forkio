@@ -5,6 +5,12 @@
     flex-direction: $flex-direction;
 }
 
+@mixin grid ($justify-content: center, $align-items: center) {
+    display: grid;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
 
 @mixin padding () {
     padding: 0 10px;
