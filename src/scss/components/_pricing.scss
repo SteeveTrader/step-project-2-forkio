@@ -15,15 +15,30 @@
     "card4"
     ;
     gap: 18px;
+
+    @media (min-width: $bp-tablet) {
+        width: 100%; 
+        grid-template-areas: 
+        "title title" 
+        "card1 card2"
+        "card3 card4"
+        ;
+    }
 }
 
 .pricing__title {
     @include monserrat;
-    padding: 88px 0 39px;
-    font-size: 42px;
-    line-height: 44px;
+    padding: 14px 0 32px;
+    font-size: 28px;
+    line-height: 42px;
     color: $main-color;
     text-align: center;
+
+    // @media (min-width: $bp-tablet) {
+    //     padding: 88px 0 39px;
+    //     font-size: 42px;
+    //     line-height: 44px;
+    // }
 }
 
 .cards {
@@ -31,11 +46,11 @@
     width: 257px;
 
     h3,
-    p,
     span,
     button {
         @include monserrat(400); 
         color: $main-color;
+        text-align: center;
     }
 
     h3,
@@ -50,26 +65,40 @@
         font-size: 24px;
         line-height: 24px; 
         padding: 36px 0 36px;
+        background-size: cover;
+        width: 100%;
     }
 
     div {
         @include flex; 
-        background-color: rgba(255, 255, 255, 0.2);        
-    }
+        background-color: rgba(255, 255, 255, 0.2);   
+        background-size: cover;
+        width: 100%;     
+    }  
 
     p {
-        padding: 30px 0 20px;
         font-size: 60px;
-        line-height: 62px;
-    }   
+        line-height: 62px;  
+        padding: 30px 0 20px; 
+        position: relative;
+        @include monserrat; 
+        color: $main-color;
+        text-align: center;    
+    }
+
+    p::after {
+        position: absolute;
+        content: "";
+
+    }
 }
 
-.per {
+.pricing__card-item {
     font-size: 14px;
     line-height: 16px;
 }
 
-.license {
+.pricing__card-license {
     padding: 73px 0 37px;
     font-size: 16px;
     line-height: 18px;
@@ -77,7 +106,7 @@
 
 /*grid areas----*/
 .pricing__title {
-    grid-area: title;
+    grid-area: title;  
 }
 
 .pricing__card1 {
