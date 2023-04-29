@@ -1,0 +1,83 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.about-fork {
+    min-width: 300px;
+    margin: 0 auto;
+    background-image: url('../images/bg-about-fork.jpg');
+    background-size: cover;
+    padding: 57px 10px 38px 10px;
+    color: $main-color;
+}
+
+.about-fork__title {
+    text-align: center;
+    @include monserrat;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 57px;
+}
+
+.about-fork__conteiner {
+    margin-top: 53px;
+    display: grid;
+    grid-row-gap: 45px;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f";
+    @include lato(700, italic);
+}
+
+.about-fork__card {
+    @include flex;
+
+    p {
+        margin-top: 33px;
+        text-align: center;
+    }
+}
+
+.about-fork__card-a {
+    grid-area: "a";
+}
+
+.about-fork__card-b {
+    grid-area: "b";
+}
+
+.about-fork__card-c {
+    grid-area: "c";
+}
+
+.about-fork__card-d {
+    grid-area: "d";
+}
+
+.about-fork__card-e {
+    grid-area: "e";
+}
+
+.about-fork__card-f {
+    grid-area: "f";
+}
+.about-fork__discripion {
+    margin-top: 37px;
+    @include lato(400, normal);
+    color: #A291A5;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: "";
+        height: 2px;
+        width: calc(100% - 75px);
+        background-color:#645766;
+        position: absolute;
+        left: 37px;
+        bottom: -22px;
+    }
+}
