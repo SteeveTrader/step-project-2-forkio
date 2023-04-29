@@ -1,10 +1,8 @@
 @use "./base/reset";
 @use "./base/defaults";
+@import './components/header';
 @use './components/revolutionary';
 @use './components/benefits';
+@import './components/about-fork';
 @use './components/pricing';
 
-
-body {
-  font-family: 'Karla', sans-serif;
-}
