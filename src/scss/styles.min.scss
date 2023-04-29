@@ -1,8 +1,8 @@
-@use "./base/reset";
-@use "./base/defaults";
+@import "./base/reset";
+@import "./base/defaults";
 @import './components/header';
-@use './components/revolutionary';
-@use './components/benefits';
+@import './components/revolutionary';
+@import './components/benefits';
 @import './components/about-fork';
-@use './components/pricing';
+@import './components/pricing';
 
