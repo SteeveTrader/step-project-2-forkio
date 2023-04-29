@@ -3,7 +3,7 @@
 
 
 .pricing {
-    min-width: 320px;
+    min-width: 300px;
     background-image: url('../images/pricing-bg.png')/*current image -*/;
     @include padding;
     @include grid;

@@ -2,7 +2,7 @@
 @import './abstracts/mixin';
 
 .revolutionary {
-    min-width: 320px;
+    min-width: 300px;
     @include flex;
     @include padding;
 }
