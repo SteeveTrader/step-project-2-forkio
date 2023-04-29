@@ -1,0 +1,148 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.header {
+    min-width: 300px;
+    @include monserrat;
+    margin: 0 auto;
+
+    .btn {
+        background-color: $purple-color;
+        color: $main-color;
+        border-radius: 40px;
+        border: none;
+    }
+}
+
+.header__menu {
+    @include flex(space-between, center, row);
+    padding: 34px 15px 32px 16px;
+    background-color: #27262A;
+}
+
+.header__button-buy {
+    padding: 11px 10px;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 40px;
+    width: 119px;
+    height: 37px;
+}
+
+.header__button-menu {
+    background-color: #27262A;
+    width: 26px;
+    height: 26px;
+    border: none;
+    position: relative;
+}
+
+.header__links {
+    width: 292px;
+    background-color: #333333;
+    padding-bottom: 14px;
+    position: absolute;
+    right: 15px;
+    top: 109px;
+}
+
+.header__links--disaibled,
+.header__btn-icon-burger--disaibled,
+.header__btn-icon-close--disaibled {
+    display: none;
+}
+
+.header__btn-icon-burger {
+    position: relative;
+}
+
+.header__btn-icon-close {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.header__item {
+    padding: 29px 35px 21px 35px;
+    border-bottom: 3px solid #3B3B3B;
+    position: relative;
+}
+
+.header__link {
+    @include monserrat(400);
+    color: $main-color;
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 26px;
+
+    &:hover {
+        color: $purple-color;
+
+        &::before {
+            content: "";
+            width: 8px;
+            height: 53px;
+            background-color: $background-purple;
+            position: absolute;
+            left: 3px;
+            top: 12px;
+        }
+    }
+}
+
+.header__discripion {
+    @include flex(flex-start, center, column);
+    padding: 50px 10px 0 10px;
+    height: 614px;
+    background-image: url('../images/header-banner.jpg');
+
+    h1 {
+        color: $main-color;
+        Font-size: 48px;
+        Line-height: 48px;
+    }
+
+    p:nth-of-type(1) {
+        margin-top: 19px;
+        color: $purple-color;
+    }
+
+    p:nth-of-type(1) {
+        margin-top: 19px;
+        color: $purple-color;
+        Font-size: 18px;
+        Line-height: 24px;
+    }
+
+    p:nth-of-type(2) {
+        margin-top: 14px;
+        color: #848E97;
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+.header__down-block {
+    background-color: $background-main;
+    padding: 36px 0 6px 0;
+    position: relative;
+
+    p {
+        color: #848E97;
+        @include monserrat(400);
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+    }
+}
+
+.header__button-download {
+    padding: 13px 29px;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 40px;
+    width: 290px;
+    position: absolute;
+    left: calc(50% - 145px);
+    top: -23px;
+}
