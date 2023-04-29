@@ -26,7 +26,7 @@ const cleanDist = () => {
 };
 
 const imgMin = () => {
-    return gulp.src('./src/images/*')
+    return gulp.src('./src/images/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'));
 };

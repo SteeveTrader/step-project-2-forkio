@@ -1,0 +1,99 @@
+@import './abstracts/variables';
+@import './abstracts/mixin';
+
+
+.benefits {
+    min-width: 320px;
+    @include padding;
+    @include grid;
+    grid-template-areas: 
+    "title"
+    "img1"
+    "wrap1"
+    "img2"
+    "wrap2"
+    "img3"
+    "wrap3"
+    "img4"
+    "wrap4"
+    "code"
+    ;
+}
+
+.benefits__title {
+    padding: 120px 0 36px;
+    grid-area: title;
+    @include monserrat;
+    font-size: 32px;
+    line-height: 38px;
+    color: $purple-color;
+    text-align: center;
+}
+
+.benefits__image1,
+.benefits__image2,
+.benefits__image3,
+.benefits__image4 {
+    @include flex
+}
+
+.benefits__text-wrap1,
+.benefits__text-wrap2,
+.benefits__text-wrap3,
+.benefits__text-wrap4 {
+    @include flex;
+
+    h2 {
+        @include monserrat(400);
+        font-size: 16px;
+        line-height: 16px;
+        color: #323232;
+        padding: 23px 0 14px;
+    }
+
+    p {
+        @include lato (400);
+        font-size: 14px;
+        line-height: 21px;
+        color: #848E97;
+    }
+}
+
+.code-img {
+    @include flex(end);
+    grid-area: code;
+}
+
+
+/*grid areas------*/
+.benefits__text-wrap1 {
+    grid-area: wrap1;
+}
+
+.benefits__text-wrap2 {
+    grid-area: wrap2;
+}
+
+.benefits__text-wrap3 {
+    grid-area: wrap3;
+}
+
+.benefits__text-wrap4 {
+    grid-area: wrap4;
+}
+
+.benefits__image1 {
+    grid-area: img1;
+}
+
+.benefits__image2 {
+    grid-area: img2;
+}
+
+.benefits__image3 {
+    grid-area: img3;
+}
+
+.benefits__image4 {
+    grid-area: img4;
+}
