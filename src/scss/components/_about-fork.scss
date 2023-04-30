@@ -52,7 +52,16 @@
 }
 
 .about-fork__card {
-    @include flex;
+    @include flex(flex-start, center, column);
+
+    div {
+        @include flex;
+        height: 64px;
+
+        img {
+            align-items: center;
+        }
+    }
 
     p {
         margin-top: 33px;
