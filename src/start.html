@@ -18,31 +18,25 @@
 <body>
     <header class="header">
         <div class="header__menu">
-            <a class="header__logo" href="#">
-                <svg width="43" height="41" viewBox="0 0 43 41" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect width="43" height="41" fill="url(#pattern0)" />
-                    <defs>
-                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use xlink:href="#image0_4_519" transform="scale(0.0232558 0.0243902)" />
-                        </pattern>
-                        <image id="image0_4_519" width="43" height="41"
-                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAApCAYAAACsldDLAAADPElEQVRYhc2Zv2sVQRDHv0nkICAEnjwIBOxESBXQJiJYiFY2kQRBULAx+AckYKNoZWMhQkD7BAVLIZIiYKNVMBAQBCEgBAIPUgmBQFAmfCdM9u3e7t5tfnzhuHd7y+7n5mZn9uYNvH7xCYX0AcA9AL8A/AWwCWAHwBaAbQA9AH8AbADYazLluUKgFwkquszzlUDf7wCuNZlksBlbn7qmQSy6VtM39BBRHQfsLICrAAZ4XOL1Ku9vN52klBuMmt8uzG+eK557TSc5DsuGLNeN3I/KBzsH4J9zvI0MpJbdZwTIhV3wzDnndvLBPvG03Y/AKojAPgPwGMADLiY5RgB02MfnBr7x+zh8PjvEs1hIg/DHCKxatiJsnXyWvWtC3zQfbMjtVLfAtriyU9RJ7IeAZVdNtJgMjVcqGozxvMQH1MQwQQvdosVwFkKX9UdJtZoU9LxfArZE6OqYGBoCsXH4VOOsjbEhEBstThW2LnupFLYxKE7QsqOR+0lyYW84lioF2yTVjpLnUBb2OoBls1i+ZAyqKuEGOm9FnkNghRXQFQDDvH4PYD4RVkEkZO0WgJ3n/CDPMvkOYNWiFjQ1cyHhFXdN6kx1g1kfsMAuAjjfEBTGDUK7LZs6cxaYBRa+xUHn1XWNz6ZKLbsV6D9mfufAVs7i3RXYGTPIFC2dA5xj2VQ3qMgxxWvhmxnkp/FtAzzNjn1btMCgIxGQ3FQ7xPl1L7FDvg2NButsUOtMc/ceU06MrXsgqwUH9Cb5jsRZBVYfnkwYOCfG1oU2K513lzzres/NYGuZiyAn1eZuDXtw6g9t9wY5lg0twGS1hU2JobHQdmKwGkNTPsHPjGV7BHZVmT6NP2dUpXw25AJNU61XbWFjuymbaltbtu7rViZ6x8LvEuuqrmzZaMLGRCrVspOsylTOA0Zh1fc6LAOBA13w9FXLSl3gh2n/yaA+bNrqYD97Cht9a8DnBm88ZfRQ+Wgz0D7OGte4aasLXe74e+Q4orb/Kcir/+ZY0KdV5vhWarvAxEcfRvqINe60BUWhT3GBeRm494r75ZQNTFSlKt/PTXlUJD73CMDTQuMfqFRhTiTuIKFMQo+Afi04NgDgP/+ztxYsrUdaAAAAAElFTkSuQmCC" />
-                    </defs>
-                </svg>
-            </a>
+            <div class="header__wrapper">
+                <a class="header__logo" href="#">
+                    <img class="header__logo-img" src="./dist/images/header/logo-header.png" alt="#">
+                    <img class="header__logo-hover" src="./dist/images/header/logo-header-hover.png" alt="#">
+                    <span class="header__logo-title">ForkIO</span>
+                </a>
 
-            <button class="header__button-buy btn">Buy Now</button>
+                <button class="header__button-buy header__btn">Buy Now</button>
 
-            <button class="header__button-menu">
-                <svg class="header__btn-icon-burger" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="white" />
-                </svg>
+                <button class="header__button-menu">
+                    <svg class="header__btn-icon-burger" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="white" />
+                    </svg>
 
-                <img class="header__btn-icon-close header__btn-icon-close--disaibled" src="./dist/images/close-icon.png"
-                    style="width: 17px; height: 17px;" alt="#">
-            </button>
+                    <img class="header__btn-icon-close header__btn-icon-close--disaibled"
+                        src="./dist/images/header/close-icon.png" style="width: 17px; height: 17px;" alt="#">
+                </button>
+            </div>
 
             <ul class="header__links header__links--disaibled">
                 <li class="header__item">
@@ -59,6 +53,7 @@
                 </li>
             </ul>
 
+
         </div>
 
         <div class="header__discripion">
@@ -68,7 +63,7 @@
         </div>
 
         <div class="header__down-block">
-            <button class="header__button-download btn">Download For Free Now</button>
+            <button class="header__button-download header__btn">Download For Free Now</button>
             <p>Unlimited 30-Days Trial Period</p>
         </div>
     </header>
@@ -76,7 +71,8 @@
     <section class="revolutionary">
         <h1 class="revolutionary__title">Revolutionary editor</h1>
 
-        <p class="revolutionary__text">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+        <p class="revolutionary__text">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate
+            dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
 
         <div class="revolutionary__buttons">
             <button class="rev-btn">
@@ -111,7 +107,7 @@
                 <span class="counter">18</span>
                 <span class="dropdown-caret"></span>
             </button>
-        
+
         </div>
     </section>
 
@@ -120,39 +116,43 @@
         <h1 class="benefits__title">&lt;Here is what you get&gt;</h1>
 
         <div class="benefits__image1">
-            <img  src="./dist/images/benefits/benefits-icon1.png" alt="benefits-icon">
+            <img src="./dist/images/benefits/benefits-icon1.png" alt="benefits-icon">
         </div>
 
         <div class="benefits__text-wrap1">
             <h2 class="benefits__text-wrap-title">Creatred to Make The Web Better</h2>
-            <p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+            <p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus
+                id quam auctor molestie eget ut augue. </p>
         </div>
 
         <div class="benefits__image2">
-            <img  src="./dist/images/benefits/benefits-icon2.png" alt="benefits-icon">
+            <img src="./dist/images/benefits/benefits-icon2.png" alt="benefits-icon">
         </div>
 
         <div class="benefits__text-wrap2">
             <h2 class="benefits__text-wrap-title">Incredibly Powerful Tool</h2>
-            <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
+            <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac.
+                Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
         </div>
 
         <div class="benefits__image3">
-            <img  src="./dist/images/benefits/benefits-icon3.png" alt="benefits-icon">
+            <img src="./dist/images/benefits/benefits-icon3.png" alt="benefits-icon">
         </div>
 
         <div class="benefits__text-wrap3">
             <h2 class="benefits__text-wrap-title">Experimental Stuff</h2>
-            <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
+            <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac.
+                Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
         </div>
 
         <div class="benefits__image4">
-            <img  src="./dist/images/benefits/benefits-icon4.png" alt="benefits-icon">
-         </div>
+            <img src="./dist/images/benefits/benefits-icon4.png" alt="benefits-icon">
+        </div>
 
         <div class="benefits__text-wrap4">
             <h2 class="benefits__text-wrap-title">Creatred to Make The Web Better</h2>
-            <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
+            <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac.
+                Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
         </div>
 
         <div class="code-img">
@@ -165,52 +165,71 @@
         <h1 class="about-fork__title">People Are Talking About Fork</h1>
         <div class="about-fork__conteiner">
             <div class="about-fork__card about-fork__card-a">
-                <img src="./dist/images/logo-about-fork-1.png" style="width: 165px; height: 63px;" alt="#">
+                <div>
+                    <img src="./dist/images/about-fork/logo-about-fork-1.png" style="width: 165px; height: 63px;"
+                        alt="#">
+                </div>
                 <p>Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed
                     varius urna et pulvinar venenatis.</p>
             </div>
 
             <div class="about-fork__card about-fork__card-b">
-                <img src="./dist/images/logo-about-fork-2.png" style="width: 148px; height: 50px;" alt="#">
+                <div>
+                    <img src="./dist/images/about-fork/logo-about-fork-2.png" style="width: 148px; height: 50px;"
+                        alt="#">
+                </div>
                 <p>Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis
                     eleifend nibh.</p>
             </div>
 
             <div class="about-fork__card about-fork__card-c">
-                <img src="./dist/images/logo-about-fork-3.png" style="width: 64px; height: 64px;" alt="#">
+                <div>
+                    <img src="./dist/images/about-fork/logo-about-fork-3.png" style="width: 64px; height: 64px;"
+                        alt="#">
+                </div>
                 <p>In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh.
                     Morbi tempus auctor felis ac vehicula.</p>
             </div>
 
             <div class="about-fork__card about-fork__card-d">
-                <img src="./dist/images/logo-about-fork-4.png" style="width: 225px; height: 24px;" alt="#">
+                <div>
+                    <img src="./dist/images/about-fork/logo-about-fork-4.png" style="width: 225px; height: 24px;"
+                        alt="#">
+                </div>
                 <p>Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed
                     varius urna et pulvinar venenatis.</p>
             </div>
 
             <div class="about-fork__card about-fork__card-e">
-                <img src="./dist/images/logo-about-fork-5.png" style="width: 166px; height: 34px;" alt="#">
+                <div>
+                    <img src="./dist/images/about-fork/logo-about-fork-5.png" style="width: 166px; height: 34px;"
+                        alt="#">
+                </div>
                 <p>Praesent ut eros tristique, malesuada lectus vel, lobortis massa. Nulla faucibus lorem id arcu
                     consequat faucibus.</p>
             </div>
 
             <div class="about-fork__card about-fork__card-f">
-                <img src="./dist/images/logo-about-fork-6.png" style="width: 108px; height: 34px;" alt="#">
+                <div>
+                    <img src="./dist/images/about-fork/logo-about-fork-6.png" style="width: 108px; height: 34px;"
+                        alt="#">
+                </div>
                 <p>Fusce pharetra erat id odio blandit, nec pharetra eros venenatis. Pellentesque porttitor cursus massa
                     et vestibulum.</p>
             </div>
         </div>
-        <p class="about-fork__discripion">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis
+        <p class="about-fork__discripion">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis
+            vitae aliquet id, imperdiet quis
             nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et
             magnis dis parturient montes, nascetur ridiculus mus. </p>
     </section>
 
     <section class="pricing">
         <h1 class="pricing__title">Fork Subscription Pricing</h1>
-        
+
         <div class="pricing__card1 cards">
             <h3 class="pricing__card-category">Students</h3>
-            
+
             <div>
                 <p class="pricing__card-price">$29</p>
 
@@ -237,7 +256,7 @@
 
         <div class="pricing__card3 cards active">
             <h3 class="pricing__card-category">agency</h3>
-            
+
             <div>
                 <p class="pricing__card-price">$99</p>
 
@@ -251,7 +270,7 @@
 
         <div class="pricing__card4 cards">
             <h3 class="pricing__card-category">enterprise</h3>
-            
+
             <div>
                 <p class="pricing__card-price">$159</p>
 
