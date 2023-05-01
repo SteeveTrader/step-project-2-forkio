@@ -3,8 +3,14 @@
 
 .revolutionary {
     min-width: 300px;
-    @include flex;
+    @include grid;
     @include padding;
+
+
+    @media (min-width: $bp-tablet) {
+        min-width: 100%; 
+
+    }
 }
 
 .revolutionary__title {
@@ -13,12 +19,15 @@
     font-size: 26px;
     line-height: 28px;
     text-transform: uppercase;
-    padding-bottom:27px;
+    padding: 80px 0 27px ;
     text-align: center;
     width: 273px;
 
     @media (min-width: $bp-tablet) {
-        width: 100%; 
+        width: 599px;
+        padding: 93px 0 27px;
+        font-size: 42px;
+        line-height: 42px;
     }
 }
 
@@ -29,6 +38,12 @@
     line-height: 20px;
     padding-bottom: 36px;
     text-align: center;
+
+    @media (min-width: $bp-tablet) {
+        font-size: 21px;
+        line-height: 32px;    
+    }
+
 }
 
 .revolutionary__buttons {
@@ -43,7 +58,7 @@
 }
 
 
-.btn {
+.rev-btn {
     @include flex(center, center, row);
     gap: 5px;
     padding: 5px 16px;

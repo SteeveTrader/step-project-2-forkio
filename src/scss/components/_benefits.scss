@@ -18,23 +18,46 @@
     "wrap4"
     "code"
     ;
+
+    @media (min-width: $bp-tablet) {
+        min-width: 100%; 
+        grid-template-areas: 
+    "title title title title title"
+    "img1 wrap1 wrap1 wrap1 wrap1"
+    "img2 wrap2 wrap2 wrap2 wrap2"
+    "img3 wrap3 wrap3 wrap3 wrap3"
+    "img4 wrap4 wrap4 wrap4 wrap4"
+    "code code code code code"
+    ;
+
+    row-gap: 60px;
+    column-gap: 24px;
+    }
 }
 
 .benefits__title {
-    padding: 120px 0 36px;
+    padding-top: 120px;
     grid-area: title;
     @include monserrat;
     font-size: 32px;
     line-height: 38px;
     color: $purple-color;
     text-align: center;
+
+    @media (min-width: $bp-tablet) {
+        width: 506px;
+        padding: 160px 0 50px; 
+        font-size: 42px;
+        line-height: 44px;
+    }
 }
 
 .benefits__image1,
 .benefits__image2,
 .benefits__image3,
 .benefits__image4 {
-    @include flex
+    @include flex;
+    padding: 38px 0 21px;
 }
 
 .benefits__text-wrap1,
@@ -43,12 +66,18 @@
 .benefits__text-wrap4 {
     @include flex;
 
+        @media (min-width: $bp-tablet) {
+            @include flex (center, start);
+        }
+
     h2 {
         @include monserrat(400);
         font-size: 16px;
         line-height: 16px;
         color: #323232;
-        padding: 23px 0 14px;
+        padding-bottom: 14px;
+
+
     }
 
     p {
@@ -56,12 +85,40 @@
         font-size: 14px;
         line-height: 21px;
         color: #848E97;
+        text-align: center;
+
+        @media (min-width: $bp-tablet) {
+        text-align: start;
+        }
+
     }
+
+    
 }
 
 .code-img {
-    @include flex(end);
     grid-area: code;
+    width: 106%;
+    height: 100%;
+    overflow: hidden;
+
+
+    @media (min-width: $bp-tablet) {
+        @include flex(center, end);
+        width: 100%;
+    }
+
+    img {
+        width: auto;
+        height: auto;
+
+        @media (min-width: $bp-tablet) {
+            object-position: left;
+        }
+
+    }
+
+
 }
 
 
