@@ -2,9 +2,12 @@
 @import "../abstracts/variables";
 
 .header {
-    min-width: 300px;
+    box-sizing: border-box;
+    min-width: 320px;
     @include monserrat;
     margin: 0 auto;
+    max-width: 1200px;
+
 }
 
 .header__btn {
@@ -29,6 +32,12 @@
     @media (min-width: $bp-tablet) {
         @include flex(center, space-between, column);
         padding: 22px 20px 18px 20px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        // @include flex(center, center, row);
+        padding: 30px 90px 0 90px;
+        background-color: #000000;
     }
 }
 
@@ -124,6 +133,15 @@
         padding: 0;
         margin-top: 22px;
     }
+
+    @media (min-width: $bp-desktop) {
+        width: 400px;
+        position: absolute;
+        margin-top: 0;
+        right: calc(40% - 110px);
+        top: 42px;
+    }
+
 }
 
 .header__links--disaibled,
@@ -136,6 +154,13 @@
     @media (min-width: $bp-tablet) {
         @include flex (space-around, center, row);
     }
+
+    @media (min-width: $bp-desktop) {
+        @include flex (center, center, row);
+        gap: 35px;
+    }
+
+
 }
 
 .header__btn-icon-burger {
@@ -174,6 +199,10 @@
         line-height: 18px;
     }
 
+    @media (min-width: $bp-desktop) {
+        line-height: 15px
+    }
+
     &:hover {
         color: $purple-color;
 
@@ -199,13 +228,17 @@
 
 .header__discripion {
     @include flex(flex-start, center, column);
-    padding: 50px 10px 0 10px;
-    height: 614px;
-    background-image: url('../images/header/header-banner.jpg');
+    padding: 50px 10px 416px 10px;
+    background: url('../images/header/header-banner.jpg') no-repeat center center;
 
     @media (min-width: $bp-tablet) {
-        padding: 69px 10px 0 10px;
+        padding: 112px 10px 470px 10px;
     }
+
+    @media (min-width: $bp-desktop) {
+        padding: 69px 10px 457px 10px;
+    }
+
 
     h1 {
         color: $main-color;
@@ -215,6 +248,11 @@
         @media (min-width: $bp-tablet) {
             font-size: 72px;
             line-height: 72px;
+        }
+
+        @media (min-width: $bp-desktop) {
+            font-size: 82px;
+            line-height: 82px;
         }
     }
 
@@ -232,6 +270,11 @@
         @media (min-width: $bp-tablet) {
             font-size: 24px;
         }
+
+        @media (min-width: $bp-desktop) {
+            font-size: 30px;
+            line-height: 30px;
+        }
     }
 
     p:nth-of-type(2) {
@@ -239,6 +282,11 @@
         color: #848E97;
         font-size: 14px;
         line-height: 14px;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 16px;
+            line-height: 16px;
+        }
     }
 }
 
