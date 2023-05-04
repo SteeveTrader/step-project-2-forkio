@@ -2,15 +2,21 @@
 @import "../abstracts/variables";
 
 .about-fork {
-    min-width: 300px;
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: 1200px;
     margin: 0 auto;
-    background-image: url('../images/about-fork/bg-about-fork.jpg');
+    background: url('../images/about-fork/bg-about-fork.jpg') no-repeat center center;
     background-size: cover;
     color: $main-color;
     padding: 57px 10px 38px 10px;
 
     @media (min-width: $bp-tablet) {
         padding: 87px 10px 88px 10px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        padding: 108px 80px 114px 80px;
     }
 }
 
@@ -40,14 +46,24 @@
     @include lato(700, italic);
 
     @media (min-width: $bp-tablet) {
-        margin-top: 88px;
-        display: grid;
+        margin-top: 87px;
         grid-row-gap: 58px;
         grid-column-gap: 63px;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "a b"
             "c d"
             "e f";
+    }
+
+    @media (min-width: $bp-desktop) {
+        margin-top: 82px;
+        grid-row-gap: 111px;
+        grid-column-gap: 87px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "a b c"
+            "d e f";
     }
 }
 
@@ -70,27 +86,27 @@
 }
 
 .about-fork__card-a {
-    grid-area: "a";
+    grid-area: a;
 }
 
 .about-fork__card-b {
-    grid-area: "b";
+    grid-area: b;
 }
 
 .about-fork__card-c {
-    grid-area: "c";
+    grid-area: c;
 }
 
 .about-fork__card-d {
-    grid-area: "d";
+    grid-area: d;
 }
 
 .about-fork__card-e {
-    grid-area: "e";
+    grid-area: e;
 }
 
 .about-fork__card-f {
-    grid-area: "f";
+    grid-area: f;
 }
 
 .about-fork__discripion {
@@ -104,6 +120,9 @@
         margin-top: 68px;
     }
 
+    @media (min-width: $bp-desktop) {
+        margin-top: 118px;
+    }
 
     &::after {
         content: "";
