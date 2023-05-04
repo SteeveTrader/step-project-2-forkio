@@ -4,24 +4,26 @@
 
 .pricing {
     min-width: 300px;
-    background-image: url('../images/pricing-bg.png')/*current image -*/;
+    background-image: url('../images/pricing-bg.png')
+        /*current image -*/
+    ;
     @include grid;
-    grid-template-areas: 
-    "title"
-    "card1"
-    "card2"
-    "card3"
-    "card4"
+    grid-template-areas:
+        "title"
+        "card1"
+        "card2"
+        "card3"
+        "card4"
     ;
     grid-gap: 18px;
     padding: 0 10px 12px 10px;
 
     @media (min-width: $bp-tablet) {
-        width: 100%; 
-        grid-template-areas: 
-        "title title" 
-        "card1 card2"
-        "card3 card4"
+        width: 100%;
+        grid-template-areas:
+            "title title"
+            "card1 card2"
+            "card3 card4"
         ;
     }
 }
@@ -42,14 +44,14 @@
 }
 
 .cards {
-    @include flex; 
+    @include flex;
     width: 257px;
     height: auto;
 
     h3,
     span,
     button {
-        @include monserrat(400); 
+        @include monserrat(400);
         color: $main-color;
         text-align: center;
     }
@@ -62,37 +64,37 @@
     }
 
     h3 {
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.3);
         font-size: 24px;
-        line-height: 24px; 
+        line-height: 24px;
         padding: 36px 0 36px;
         background-size: cover;
         width: 100%;
     }
 
     div {
-        @include flex; 
-        background-color: rgba(255, 255, 255, 0.2);   
+        @include flex;
+        background-color: rgba(255, 255, 255, 0.2);
         background-size: cover;
-        width: 100%; 
-        padding-bottom: 36px;    
-    }  
+        width: 100%;
+        padding-bottom: 36px;
+    }
 
     p {
         font-size: 60px;
-        line-height: 62px;  
-        padding: 30px 0 20px; 
+        line-height: 62px;
+        padding: 30px 0 20px;
         position: relative;
-        @include monserrat; 
+        @include monserrat;
         color: $main-color;
-        text-align: center;    
+        text-align: center;
     }
 
     p::after {
         position: absolute;
         content: "";
         display: block;
-        width:  60px;
+        width: 60px;
         border-bottom: 4px solid #8D81AC;
         top: 166px;
         left: 28px;
@@ -112,13 +114,13 @@
 }
 
 .license-one {
-    padding: 83px 20px 45px 20px; 
+    padding: 83px 20px 45px 20px;
 }
 
 
 .pricing__card-btn {
     @include button-reset;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     border-radius: 28px;
     padding: 15px 37px;
@@ -127,7 +129,7 @@
 
 .active {
     width: 299px;
-    
+
     h3 {
         background: rgba(0, 0, 0, 0.2);
     }
@@ -140,11 +142,11 @@
 
 /*grid areas----*/
 .pricing__title {
-    grid-area: title;  
+    grid-area: title;
 }
 
 .pricing__card1 {
-    grid-area: card1;   
+    grid-area: card1;
 }
 
 .pricing__card2 {

@@ -6,32 +6,32 @@
     min-width: 300px;
     @include padding;
     @include grid;
-    grid-template-areas: 
-    "title"
-    "img1"
-    "wrap1"
-    "img2"
-    "wrap2"
-    "img3"
-    "wrap3"
-    "img4"
-    "wrap4"
-    "code"
+    grid-template-areas:
+        "title"
+        "img1"
+        "wrap1"
+        "img2"
+        "wrap2"
+        "img3"
+        "wrap3"
+        "img4"
+        "wrap4"
+        "code"
     ;
 
     @media (min-width: $bp-tablet) {
-        min-width: 100%; 
-        grid-template-areas: 
-    "title title title title title"
-    "img1 wrap1 wrap1 wrap1 wrap1"
-    "img2 wrap2 wrap2 wrap2 wrap2"
-    "img3 wrap3 wrap3 wrap3 wrap3"
-    "img4 wrap4 wrap4 wrap4 wrap4"
-    "code code code code code"
-    ;
+        min-width: 100%;
+        grid-template-areas:
+            "title title title title title"
+            "img1 wrap1 wrap1 wrap1 wrap1"
+            "img2 wrap2 wrap2 wrap2 wrap2"
+            "img3 wrap3 wrap3 wrap3 wrap3"
+            "img4 wrap4 wrap4 wrap4 wrap4"
+            "code code code code code"
+        ;
 
-    row-gap: 60px;
-    column-gap: 24px;
+        row-gap: 60px;
+        column-gap: 24px;
     }
 }
 
@@ -46,7 +46,7 @@
 
     @media (min-width: $bp-tablet) {
         width: 506px;
-        padding: 160px 0 50px; 
+        padding: 160px 0 50px;
         font-size: 42px;
         line-height: 44px;
     }
@@ -66,9 +66,9 @@
 .benefits__text-wrap4 {
     @include flex;
 
-        @media (min-width: $bp-tablet) {
-            @include flex (center, start);
-        }
+    @media (min-width: $bp-tablet) {
+        @include flex (center, start);
+    }
 
     h2 {
         @include monserrat(400);
@@ -88,12 +88,12 @@
         text-align: center;
 
         @media (min-width: $bp-tablet) {
-        text-align: start;
+            text-align: start;
         }
 
     }
 
-    
+
 }
 
 .code-img {
