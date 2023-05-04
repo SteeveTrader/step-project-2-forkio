@@ -35,7 +35,6 @@
     }
 
     @media (min-width: $bp-desktop) {
-        // @include flex(center, center, row);
         padding: 30px 90px 0 90px;
         background-color: #000000;
     }
@@ -160,7 +159,6 @@
         gap: 35px;
     }
 
-
 }
 
 .header__btn-icon-burger {
@@ -230,9 +228,7 @@
     @include flex(flex-start, center, column);
     padding: 50px 10px 416px 10px;
     background: url('../images/header/header-banner.jpg') no-repeat center center;
-    background: cover;
-
-
+   
     @media (min-width: $bp-tablet) {
         padding: 112px 10px 470px 10px;
     }
