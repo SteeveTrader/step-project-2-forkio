@@ -4,27 +4,13 @@
 
 .pricing {
     min-width: 300px;
-    background-image: url('../images/pricing-bg.png')/*current image -*/;
-    @include grid;
-    grid-template-areas: 
-    "title"
-    "card1"
-    "card2"
-    "card3"
-    "card4"
-    ;
-    grid-gap: 18px;
+    background-image: url('../images/pricing-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 0 10px 12px 10px;
-
-    @media (min-width: $bp-tablet) {
-        width: 100%; 
-        grid-template-areas: 
-        "title title" 
-        "card1 card2"
-        "card3 card4"
-        ;
-    }
 }
+
+
 
 .pricing__title {
     @include monserrat;
@@ -34,17 +20,60 @@
     color: $main-color;
     text-align: center;
 
+
     @media (min-width: $bp-tablet) {
-        padding: 88px 0 39px;
+        padding: 90px 0 39px;
         font-size: 42px;
         line-height: 44px;
+        @include flex;
+        flex-wrap: wrap;  
+    }
+
+
+    @media (min-width: $bp-desktop) {
+        padding: 83px 0 61px;
+        font-size: 48px;
+        line-height: 50px;
+ 
     }
 }
 
+
+.pricing__card-container {
+    @include flex;
+    gap: 18px;
+   
+
+    @media (min-width: $bp-tablet) {
+        flex-direction: row;              
+        flex-wrap: wrap;        
+        gap: 25px; 
+
+    }
+
+    @media (min-width: $bp-desktop) {
+        flex-wrap: nowrap; 
+        gap: 15px; 
+        max-width: 1200px;
+    }
+
+}
+
+
 .cards {
-    @include flex; 
-    width: 257px;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 257px;
+    flex-wrap: wrap;
+    flex: 0 1 43%; 
+    min-width: 200px; 
+    margin: 5px;
+
+    // @media (min-width: $bp-tablet) {
+    //     width: 100%;
+    // }
 
     h3,
     span,
@@ -52,6 +81,7 @@
         @include monserrat(400); 
         color: $main-color;
         text-align: center;
+        
     }
 
     h3,
@@ -60,13 +90,12 @@
     button {
         text-transform: uppercase;
     }
-
+    
     h3 {
         background-color: rgba(255, 255, 255, 0.3); 
         font-size: 24px;
         line-height: 24px; 
         padding: 36px 0 36px;
-        background-size: cover;
         width: 100%;
     }
 
@@ -75,33 +104,35 @@
         background-color: rgba(255, 255, 255, 0.2);   
         background-size: cover;
         width: 100%; 
-        padding-bottom: 36px;    
+        padding-bottom: 36px;   
+        flex: 1 1 200px;
     }  
 
     p {
         font-size: 60px;
         line-height: 62px;  
         padding: 30px 0 20px; 
-        position: relative;
         @include monserrat; 
         color: $main-color;
         text-align: center;    
     }
-
-    p::after {
-        position: absolute;
-        content: "";
-        display: block;
-        width:  60px;
-        border-bottom: 4px solid #8D81AC;
-        top: 166px;
-        left: 28px;
-    }
+    
 }
 
 .pricing__card-item {
     font-size: 14px;
     line-height: 16px;
+    position: relative;
+}
+
+.pricing__card-item::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width:  60px;
+    border-bottom: 4px solid #8D81AC;
+    top: 60px;
+    left: calc(50% - 30px);
 }
 
 .pricing__card-license {
@@ -115,6 +146,10 @@
     padding: 83px 20px 45px 20px; 
 }
 
+.license-thre {
+    padding: 91px 20px 83px 20px; 
+}
+
 
 .pricing__card-btn {
     @include button-reset;
@@ -126,35 +161,45 @@
 
 
 .active {
-    width: 299px;
+    max-width: 299px;
+    text-align: end;
     
     h3 {
         background: rgba(0, 0, 0, 0.2);
+        padding: 43px 0 43px;
     }
 
     div {
         background: rgba(70, 48, 72, 1);
+        padding-bottom: 47px; 
     }
+
+    p {
+        font-size: 82px;
+        line-height: 84px;
+        padding: 14px 0 16px; 
+    }
+
 }
 
 
-/*grid areas----*/
-.pricing__title {
-    grid-area: title;  
-}
+// /*grid areas----*/
+// .pricing__title {
+//     grid-area: title;  
+// }
 
-.pricing__card1 {
-    grid-area: card1;   
-}
+// .pricing__card1 {
+//     grid-area: card1; 
+// }
 
-.pricing__card2 {
-    grid-area: card2;
-}
+// .pricing__card2 {
+//     grid-area: card2;
+// }
 
-.pricing__card3 {
-    grid-area: card3;
-}
+// .pricing__card3 {
+//     grid-area: card3;
+// }
 
-.pricing__card4 {
-    grid-area: card4;
-}
+// .pricing__card4 {
+//     grid-area: card4;
+// }

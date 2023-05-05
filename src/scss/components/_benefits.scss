@@ -4,6 +4,8 @@
 
 .benefits {
     min-width: 300px;
+    margin: 0 auto;
+    max-width: 100%;
     @include padding;
     @include grid;
     grid-template-areas: 
@@ -19,19 +21,34 @@
     "code"
     ;
 
-    @media (min-width: $bp-tablet) {
-        min-width: 100%; 
-        grid-template-areas: 
-    "title title title title title"
-    "img1 wrap1 wrap1 wrap1 wrap1"
-    "img2 wrap2 wrap2 wrap2 wrap2"
-    "img3 wrap3 wrap3 wrap3 wrap3"
-    "img4 wrap4 wrap4 wrap4 wrap4"
-    "code code code code code"
-    ;
 
-    row-gap: 60px;
-    column-gap: 24px;
+
+
+    @media (min-width: $bp-tablet) {
+        grid-template-areas: 
+        "title title"
+        "img1 wrap1"
+        "img2 wrap2"
+        "img3 wrap3"
+        "img4 wrap4"
+        "code code"
+        ;
+        row-gap: 60px;
+        column-gap: 24px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        grid-template-areas: 
+        
+        "img1 wrap1 title"
+        "img2 wrap2 code"
+        "img3 wrap3 code"
+        "img4 wrap4 code"
+        ;
+        row-gap: 35px;
+        column-gap: 24px;
+        max-width: 1200px;
+        grid-template-columns: 1fr 2fr 700px;
     }
 }
 
@@ -45,10 +62,18 @@
     text-align: center;
 
     @media (min-width: $bp-tablet) {
-        width: 506px;
+
         padding: 160px 0 50px; 
         font-size: 42px;
         line-height: 44px;
+        
+    }
+
+    @media (min-width: $bp-desktop) {
+        padding: 0; 
+        font-size: 48px;
+        line-height: 50px;
+
     }
 }
 
@@ -58,6 +83,10 @@
 .benefits__image4 {
     @include flex;
     padding: 38px 0 21px;
+
+    @media (min-width: $bp-tablet) {
+        padding: 0; 
+    }
 }
 
 .benefits__text-wrap1,
@@ -98,22 +127,20 @@
 
 .code-img {
     grid-area: code;
-    width: 106%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
 
 
     @media (min-width: $bp-tablet) {
-        @include flex(center, end);
-        width: 100%;
+        overflow: visible;
+        display: flex;
+        justify-content: end;
     }
 
     img {
-        width: auto;
-        height: auto;
-
         @media (min-width: $bp-tablet) {
-            object-position: left;
+            max-width: 100%;
         }
 
     }
