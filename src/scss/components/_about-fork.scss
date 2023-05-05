@@ -9,14 +9,14 @@
     background: url('../images/about-fork/bg-about-fork.jpg') no-repeat center center;
     background-size: cover;
     color: $main-color;
-    padding: 57px 10px 38px 10px;
+    padding: 57px 10px 22px 10px;
 
     @media (min-width: $bp-tablet) {
-        padding: 87px 10px 88px 10px;
+        padding: 87px 10px 20px 10px;
     }
 
     @media (min-width: $bp-desktop) {
-        padding: 108px 80px 114px 80px;
+        padding: 108px 80px 50px 80px;
     }
 }
 
