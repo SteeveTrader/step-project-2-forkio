@@ -1,25 +1,50 @@
-Quick setup — if you’ve done this kind of thing before
-or	
-	
-Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
-…or create a new repository on the command line
+Учасники проекту:
+1. Дмитро Кудь Github: @dmitriykud
+2. Степан Думенко Github: @SteeveTrader
 
-echo "# gfdds" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/SteeveTrader/gfdds.git
-git push -u origin main
+Використані технології:
+HTML - розмітка сторінки;
+SCSS - препроцесор;
+JS - dropdowm menu;
+BEM - назви класів надані згідно методології BEM;
+Node.js, npm.
+GULP - використано для збірки проекту + додаткові модулі:
+    "browser-sync": "^2.29.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.62.0;
 
 
-…or push an existing repository from the command line
 
-git remote add origin https://github.com/SteeveTrader/gfdds.git
-git branch -M main
-git push -u origin main
+Завдання студента №1 виконав Дмитро Кудь;
+Завдання студента №2 виконав Степан Думенко;
 
 
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+Запуск коду з домогою:
+gulp build
+gulp dev
+
+або 
+npm run build 
+npm run dev
+
+
+Робота над проектом в команді:
+Створено та підключено віддалений репозиторій:
+головна гілка - main
+гілка розробки - dev
+кожен зі студентів за потреби відгалужувався для виконання індивідуальних завдань.
+
+По завершенню виконання індивідуальних завдать створювався merge гілки, другий струдент був відповідальний за перевірку 
+коду та підтвердження злиття гілок. (декілька гілок залишено для наглядного прикладу роботи студентів). Додатково виконувались вирішення конфліктів.
+Сторінка розміщена в Github pages за адресою - 
+
+
 
