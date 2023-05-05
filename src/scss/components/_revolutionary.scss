@@ -3,13 +3,14 @@
 
 .revolutionary {
     min-width: 300px;
-    @include grid;
+    margin: 0 auto; 
+    @include flex;
     @include padding;
 
 
-    @media (min-width: $bp-tablet) {
-        min-width: 100%;
 
+    @media (min-width: $bp-desktop) {
+        max-width: 1200px; 
     }
 }
 
@@ -19,15 +20,24 @@
     font-size: 26px;
     line-height: 28px;
     text-transform: uppercase;
-    padding: 80px 0 27px;
+
+    padding: 0 0 27px ;
+
     text-align: center;
-    width: 273px;
+    // max-width: 100%;
+
 
     @media (min-width: $bp-tablet) {
-        width: 599px;
-        padding: 93px 0 27px;
+        padding: 0 0 27px;
         font-size: 42px;
         line-height: 42px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        max-width: 1200px; 
+        font-size: 54px;
+        line-height: 54px;
+        padding: 0 0 35px;
     }
 }
 
@@ -44,12 +54,15 @@
         line-height: 32px;
     }
 
+    @media (min-width: $bp-desktop) {
+        max-width: 1200px; 
+    }
+
 }
 
 .revolutionary__buttons {
     @include flex(center, center, row);
     gap: 10px;
-    width: 280px;
     flex-wrap: wrap;
 
     @media (min-width: $bp-tablet) {
