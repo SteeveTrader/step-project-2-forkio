@@ -8,23 +8,24 @@
     max-width: 100%;
     @include padding;
     @include grid;
-    grid-template-areas: 
-    "title"
-    "img1"
-    "wrap1"
-    "img2"
-    "wrap2"
-    "img3"
-    "wrap3"
-    "img4"
-    "wrap4"
-    "code"
+    grid-template-areas:
+        "title"
+        "img1"
+        "wrap1"
+        "img2"
+        "wrap2"
+        "img3"
+        "wrap3"
+        "img4"
+        "wrap4"
+        "code"
     ;
 
 
 
 
     @media (min-width: $bp-tablet) {
+
         grid-template-areas: 
         "title title"
         "img1 wrap1"
@@ -62,8 +63,8 @@
     text-align: center;
 
     @media (min-width: $bp-tablet) {
-
         padding: 160px 0 50px; 
+
         font-size: 42px;
         line-height: 44px;
         
@@ -95,9 +96,9 @@
 .benefits__text-wrap4 {
     @include flex;
 
-        @media (min-width: $bp-tablet) {
-            @include flex (center, start);
-        }
+    @media (min-width: $bp-tablet) {
+        @include flex (center, start);
+    }
 
     h2 {
         @include monserrat(400);
@@ -117,12 +118,12 @@
         text-align: center;
 
         @media (min-width: $bp-tablet) {
-        text-align: start;
+            text-align: start;
         }
 
     }
 
-    
+
 }
 
 .code-img {

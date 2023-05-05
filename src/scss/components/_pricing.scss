@@ -61,6 +61,7 @@
 
 
 .cards {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,10 +76,11 @@
     //     width: 100%;
     // }
 
+
     h3,
     span,
     button {
-        @include monserrat(400); 
+        @include monserrat(400);
         color: $main-color;
         text-align: center;
         
@@ -92,16 +94,16 @@
     }
     
     h3 {
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.3);
         font-size: 24px;
-        line-height: 24px; 
+        line-height: 24px;
         padding: 36px 0 36px;
         width: 100%;
     }
 
     div {
-        @include flex; 
-        background-color: rgba(255, 255, 255, 0.2);   
+        @include flex;
+        background-color: rgba(255, 255, 255, 0.2);
         background-size: cover;
         width: 100%; 
         padding-bottom: 36px;   
@@ -114,9 +116,9 @@
         padding: 30px 0 20px; 
         @include monserrat; 
         color: $main-color;
-        text-align: center;    
+        text-align: center;
     }
-    
+
 }
 
 .pricing__card-item {
@@ -143,7 +145,7 @@
 }
 
 .license-one {
-    padding: 83px 20px 45px 20px; 
+    padding: 83px 20px 45px 20px;
 }
 
 .license-thre {
@@ -153,7 +155,7 @@
 
 .pricing__card-btn {
     @include button-reset;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     border-radius: 28px;
     padding: 15px 37px;
@@ -161,6 +163,7 @@
 
 
 .active {
+
     max-width: 299px;
     text-align: end;
     
@@ -179,6 +182,7 @@
         line-height: 84px;
         padding: 14px 0 16px; 
     }
+
 
 }
 
