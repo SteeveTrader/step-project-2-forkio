@@ -33,7 +33,7 @@
         "img4 wrap4"
         "code code"
         ;
-        row-gap: 60px;
+        row-gap: 50px;
         column-gap: 24px;
     }
 
@@ -63,7 +63,7 @@
     text-align: center;
 
     @media (min-width: $bp-tablet) {
-        padding: 160px 0 50px; 
+        padding-top: 160px; 
 
         font-size: 42px;
         line-height: 44px;
@@ -86,7 +86,12 @@
     padding: 38px 0 21px 10px;
 
     @media (min-width: $bp-tablet) {
-        padding-left: 10px; 
+        padding: 0 0 0 10px; 
+        margin-bottom: 10px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        margin-bottom: 0;
     }
 }
 
@@ -100,6 +105,7 @@
     @media (min-width: $bp-tablet) {
         @include flex (center, start);
         padding-right: 10px; 
+        margin-bottom: 10px;
     }
 
     @media (min-width: $bp-desktop) {
