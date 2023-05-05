@@ -1,0 +1,142 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+
+.about-fork {
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: url('../images/about-fork/bg-about-fork.jpg') no-repeat center bottom;
+    background-size: cover;
+    color: $main-color;
+    padding: 57px 10px 22px 10px;
+
+    @media (min-width: $bp-tablet) {
+        padding: 87px 10px 20px 10px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        padding: 108px 80px 50px 80px;
+    }
+}
+
+.about-fork__title {
+    text-align: center;
+    @include monserrat;
+    font-size: 36px;
+    line-height: 48px;
+
+    @media (min-width: $bp-tablet) {
+        font-size: 42px;
+        line-height: 44px;
+    }
+}
+
+.about-fork__conteiner {
+    margin-top: 53px;
+    display: grid;
+    grid-row-gap: 45px;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f";
+    @include lato(700, italic);
+
+    @media (min-width: $bp-tablet) {
+        margin-top: 87px;
+        grid-row-gap: 58px;
+        grid-column-gap: 63px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "a b"
+            "c d"
+            "e f";
+    }
+
+    @media (min-width: $bp-desktop) {
+        margin-top: 82px;
+        grid-row-gap: 111px;
+        grid-column-gap: 87px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "a b c"
+            "d e f";
+    }
+}
+
+.about-fork__card {
+    @include flex(flex-start, center, column);
+
+    div {
+        @include flex;
+        height: 64px;
+
+        img {
+            align-items: center;
+        }
+    }
+
+    p {
+        margin-top: 33px;
+        text-align: center;
+    }
+}
+
+.about-fork__card-a {
+    grid-area: a;
+}
+
+.about-fork__card-b {
+    grid-area: b;
+}
+
+.about-fork__card-c {
+    grid-area: c;
+}
+
+.about-fork__card-d {
+    grid-area: d;
+}
+
+.about-fork__card-e {
+    grid-area: e;
+}
+
+.about-fork__card-f {
+    grid-area: f;
+}
+
+.about-fork__discripion {
+    margin-top: 37px;
+    @include lato(400, normal);
+    color: #A291A5;
+    text-align: center;
+    position: relative;
+
+    @media (min-width: $bp-tablet) {
+        margin-top: 68px;
+    }
+
+    @media (min-width: $bp-desktop) {
+        margin-top: 118px;
+    }
+
+    &::after {
+        content: "";
+        height: 2px;
+        width: calc(100% - 75px);
+        background-color: #645766;
+        position: absolute;
+        left: 37px;
+        bottom: -22px;
+
+        @media (min-width: $bp-tablet) {
+            width: calc(100% - 213px);
+            left: 106px;
+            bottom: -19px;
+        }
+    }
+}

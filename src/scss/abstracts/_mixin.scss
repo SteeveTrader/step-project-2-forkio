@@ -1,5 +1,36 @@
-@mixin flex ($justify-content: center, $align-items: center) {
+@mixin flex ($justify-content: center, $align-items: center, $flex-direction: column) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
+    flex-direction: $flex-direction;
 }
+
+@mixin grid {
+    display: grid;
+    place-items: center;
+}
+
+
+@mixin padding () {
+    padding: 0 10px;
+}
+
+@mixin monserrat ($font-weight: 700) {
+    font-family: 'Montserrat';
+    font-weight: $font-weight;
+}
+
+@mixin lato ($font-weight: 700, $font-style: normal) {
+    font-family: 'Lato';
+    font-style: $font-style;
+    font-weight: $font-weight;
+}
+
+@mixin button-reset {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }

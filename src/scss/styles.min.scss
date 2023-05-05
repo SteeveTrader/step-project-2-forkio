@@ -1,6 +1,8 @@
+@import "./base/reset";
+@import "./base/defaults";
 @import './components/header';
-@import './abstracts/variables';
+@import './components/revolutionary';
+@import './components/benefits';
+@import './components/about-fork';
+@import './components/pricing';
 
-body {
-  font-family: 'Karla', sans-serif;;
-}
