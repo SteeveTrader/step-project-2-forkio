@@ -6,7 +6,6 @@
     min-width: 300px;
     margin: 0 auto;
     max-width: 100%;
-    @include padding;
     @include grid;
     grid-template-areas:
         "title"
@@ -41,15 +40,16 @@
     @media (min-width: $bp-desktop) {
         grid-template-areas: 
         
-        "img1 wrap1 title"
-        "img2 wrap2 code"
-        "img3 wrap3 code"
-        "img4 wrap4 code"
+        "img1 wrap1 title title"
+        "img2 wrap2 code code"
+        "img3 wrap3 code code"
+        "img4 wrap4 code code"
         ;
         row-gap: 35px;
         column-gap: 24px;
         max-width: 1200px;
-        grid-template-columns: 1fr 2fr 700px;
+        background-color: #F4F4F4;
+        padding: 98px 0 33px;
     }
 }
 
@@ -83,10 +83,10 @@
 .benefits__image3,
 .benefits__image4 {
     @include flex;
-    padding: 38px 0 21px;
+    padding: 38px 0 21px 10px;
 
     @media (min-width: $bp-tablet) {
-        padding: 0; 
+        padding-left: 10px; 
     }
 }
 
@@ -95,9 +95,15 @@
 .benefits__text-wrap3,
 .benefits__text-wrap4 {
     @include flex;
+    @include padding;
 
     @media (min-width: $bp-tablet) {
         @include flex (center, start);
+        padding-right: 10px; 
+    }
+
+    @media (min-width: $bp-desktop) {
+        padding: 0; 
     }
 
     h2 {
@@ -139,10 +145,16 @@
         justify-content: end;
     }
 
+    @media (min-width: $bp-desktop) {
+        overflow: hidden;
+        display: flex;
+        justify-content: end;
+    }
+
     img {
         @media (min-width: $bp-tablet) {
-            max-width: 100%;
-        }
+            width: 100%;
+        }   
 
     }
 

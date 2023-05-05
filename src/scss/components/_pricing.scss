@@ -8,13 +8,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 10px 12px 10px;
+    margin: 0 auto;
+    max-width: 1180px;
+
 }
 
 
 
 .pricing__title {
     @include monserrat;
-    padding: 14px 0 32px;
+    padding: 14px 0 14px;
     font-size: 28px;
     line-height: 42px;
     color: $main-color;
@@ -40,41 +43,45 @@
 
 
 .pricing__card-container {
-    @include flex;
-    gap: 18px;
-   
+    @include grid;
+    grid-gap: 18px;
+    grid-template-areas: 
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    ;
+
 
     @media (min-width: $bp-tablet) {
-        flex-direction: row;              
-        flex-wrap: wrap;        
-        gap: 25px; 
+        grid-column-gap: 25px;
+        grid-row-gap: 30px;
+        grid-template-areas: 
+        "card1 card2"
+        "card3 card4"
+        ;
 
     }
 
     @media (min-width: $bp-desktop) {
-        flex-wrap: nowrap; 
-        gap: 15px; 
-        max-width: 1200px;
+        grid-gap: 15px;
+        grid-template-areas: 
+        "card1 card2 card3 card4"
+        ;
     }
 
 }
 
 
 .cards {
-
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     max-width: 257px;
     flex-wrap: wrap;
     flex: 0 1 43%; 
     min-width: 200px; 
     margin: 5px;
-
-    // @media (min-width: $bp-tablet) {
-    //     width: 100%;
-    // }
 
 
     h3,
@@ -187,23 +194,20 @@
 }
 
 
-// /*grid areas----*/
-// .pricing__title {
-//     grid-area: title;  
-// }
+/*grid areas----*/
 
-// .pricing__card1 {
-//     grid-area: card1; 
-// }
+.pricing__card1 {
+    grid-area: card1; 
+}
 
-// .pricing__card2 {
-//     grid-area: card2;
-// }
+.pricing__card2 {
+    grid-area: card2;
+}
 
-// .pricing__card3 {
-//     grid-area: card3;
-// }
+.pricing__card3 {
+    grid-area: card3;
+}
 
-// .pricing__card4 {
-//     grid-area: card4;
-// }
+.pricing__card4 {
+    grid-area: card4;
+}
